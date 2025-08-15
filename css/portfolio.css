@@ -1,0 +1,247 @@
+/* Portfolio Page Styles */
+.portfolio-hero {
+  padding: 4rem 0 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.02) 0%, transparent 100%);
+}
+
+.portfolio-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.portfolio-subtitle {
+  font-size: 14px;
+  color: #666;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.tools-section {
+  padding: 3rem 0 5rem;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.tool-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.tool-header {
+  position: relative;
+  overflow: hidden;
+}
+
+.tool-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.tool-card:hover .tool-image {
+  transform: scale(1.05);
+}
+
+.tool-header h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: #fff;
+  padding: 2rem 1.5rem 1rem;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.tool-content {
+  padding: 1.5rem;
+}
+
+.tool-content p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Calculator Styles */
+.calculator {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: "Outfit", sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.calc-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Outfit", sans-serif;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.calc-btn:hover {
+  background: #333;
+  transform: translateY(-1px);
+}
+
+.result {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  min-height: 20px;
+}
+
+/* Simple Calculator Specific Styles */
+.calc-display {
+  margin-bottom: 1rem;
+}
+
+.calc-display input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: right;
+  background: #fff;
+  font-family: "Outfit", sans-serif;
+}
+
+.calc-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.calc-buttons .calc-btn {
+  padding: 15px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.calc-buttons .calc-btn.equals {
+  grid-row: span 3;
+  background: #333;
+}
+
+.calc-buttons .calc-btn.zero {
+  grid-column: span 2;
+}
+
+/* BMI Result Styles */
+.bmi-result {
+  font-weight: 600;
+}
+
+.bmi-category {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-top: 0.25rem;
+}
+
+/* Grade Result Styles */
+.grade-result {
+  font-weight: 600;
+}
+
+.grade-details {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-top: 0.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .portfolio-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .calc-buttons {
+    gap: 6px;
+  }
+
+  .calc-buttons .calc-btn {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tool-content {
+    padding: 1rem;
+  }
+
+  .calculator {
+    padding: 1rem;
+  }
+
+  .calc-buttons .calc-btn {
+    padding: 10px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Jeremy's personal website - Developer & Creative Thinker. Portfolio, blog, and tools including BMI calculator, grade calculator, and more."
+    />
+    <meta
+      name="keywords"
+      content="personal website, portfolio, developer, web development, calculator tools"
+    />
+    <meta name="author" content="Jeremy" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Jeremy - Personal Website" />
+    <meta
+      property="og:description"
+      content="Developer & Creative Thinker. Building digital experiences with clean code and thoughtful design."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jeremy - Personal Website" />
+    <meta
+      name="twitter:description"
+      content="Developer & Creative Thinker. Building digital experiences with clean code and thoughtful design."
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <title>Jeremy - Personal Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="index.html">
+            <img
+              src="https://www.jeremy0x.codes/logo.png"
+              alt="Jeremy"
+              class="logo-image"
+            />
+          </a>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="portfolio/" class="nav-link">Portfolio</a></li>
+          <li><a href="blog/" class="nav-link">Blog</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <section class="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Hi, I'm Jeremy</h1>
+            <p class="hero-description">Developer & Creative Thinker</p>
+            <p class="hero-subtitle">
+              Building digital experiences with clean code and thoughtful
+              design.
+            </p>
+            <div class="hero-buttons">
+              <a href="portfolio/" class="btn btn-primary">View Portfolio</a>
+              <a href="blog/" class="btn btn-secondary">Read Blog</a>
+            </div>
+          </div>
+          <div class="scroll-indicator">
+            <div class="mouse-icon" onclick="scrollToAbout()">
+              <div class="mouse-wheel"></div>
+            </div>
+            <span class="scroll-text">Scroll Down</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="container">
+          <h2>About Me</h2>
+          <div class="about-content">
+            <div class="about-text">
+              <p>
+                Passionate about technology and innovation. Currently studying
+                Computer Science at university, exploring the intersection of
+                business and technology.
+              </p>
+              <p>
+                Love creating practical tools and sharing knowledge through
+                writing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; 2025 Jeremy. Built for ENT 302 Personal Website Assignment.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

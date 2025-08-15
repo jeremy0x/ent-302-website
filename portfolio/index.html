@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Jeremy's Portfolio - Interactive tools including BMI calculator, grade calculator, and simple calculator."
+    />
+    <meta
+      name="keywords"
+      content="portfolio, calculator tools, BMI calculator, grade calculator"
+    />
+    <meta name="author" content="Jeremy" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Jeremy's Portfolio - Tools & Projects" />
+    <meta
+      property="og:description"
+      content="Interactive tools and projects showcasing web development skills."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Jeremy's Portfolio - Tools & Projects"
+    />
+    <meta
+      name="twitter:description"
+      content="Interactive tools and projects showcasing web development skills."
+    />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <title>Portfolio - Jeremy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/portfolio.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="../index.html">
+            <img
+              src="https://www.jeremy0x.codes/logo.png"
+              alt="Jeremy"
+              class="logo-image"
+            />
+          </a>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li>
+            <a href="index.html" class="nav-link active">Portfolio</a>
+          </li>
+          <li><a href="../blog/" class="nav-link">Blog</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <section class="portfolio-hero">
+        <div class="container">
+          <h1>Portfolio</h1>
+          <p class="portfolio-subtitle">
+            Interactive tools and projects I've built
+          </p>
+        </div>
+      </section>
+
+      <section class="tools-section">
+        <div class="container">
+          <div class="tools-grid">
+            <!-- BMI Calculator -->
+            <div class="tool-card">
+              <div class="tool-header">
+                <img
+                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=200&fit=crop"
+                  alt="BMI Calculator"
+                  class="tool-image"
+                />
+                <h3>BMI Calculator</h3>
+              </div>
+              <div class="tool-content">
+                <p>
+                  Calculate your Body Mass Index (BMI) to assess your weight
+                  category.
+                </p>
+                <div class="calculator">
+                  <div class="input-group">
+                    <label for="weight">Weight (kg)</label>
+                    <input
+                      type="number"
+                      id="weight"
+                      placeholder="70"
+                      step="0.1"
+                      title="Enter your weight in kilograms"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label for="height">Height (cm)</label>
+                    <input
+                      type="number"
+                      id="height"
+                      placeholder="170"
+                      step="0.1"
+                      title="Enter your height in centimeters"
+                    />
+                  </div>
+                  <button
+                    type="button"
+                    onclick="calculateBMI()"
+                    class="calc-btn"
+                  >
+                    Calculate BMI
+                  </button>
+                  <div id="bmi-result" class="result"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Simple Calculator -->
+            <div class="tool-card">
+              <div class="tool-header">
+                <img
+                  src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=200&fit=crop"
+                  alt="Calculator"
+                  class="tool-image"
+                />
+                <h3>Simple Calculator</h3>
+              </div>
+              <div class="tool-content">
+                <p>Basic arithmetic calculator for quick calculations.</p>
+                <div class="calculator">
+                  <div class="calc-display">
+                    <input
+                      type="text"
+                      id="calc-display"
+                      readonly
+                      title="Calculator display"
+                    />
+                  </div>
+                  <div class="calc-buttons">
+                    <button
+                      type="button"
+                      onclick="clearDisplay()"
+                      class="calc-btn"
+                    >
+                      C
+                    </button>
+                    <button
+                      type="button"
+                      onclick="appendToDisplay('/')"
+                      class="calc-btn"
+                    >
+                      /
+                    </button>
+                    <button
+                      type="button"
+                      onclick="appendToDisplay('*')"
+                      class="calc-btn"
+                    >
+                      ×
+                    </button>
+                    <button
+                      type="button"
+                      onclick="appendToDisplay('-')"
+                      class="calc-btn"
+                    >
+                      -
+                    </button>
+                    <button
+                      type="button"
+                      onclick="appendToDisplay('7')"
+                      class="calc-btn"
+                    >
+                      7
+                    </button>
+                    <button
+                      type="button"
+                      onclick="appendToDisplay('8')"
+                      class="calc-btn"
+                    >
+                      8
+                    </button>
+                    <button
+                      type="button"
+                      onclick="appendToDisplay('9')"
+                      class="calc-btn"
+                    >
+                      9
+                    </button>
+                    <button
+                      type="button"
+                      onclick="appendToDisplay('+')"
+                      class="calc-btn"
+                    >
+                      +
+                    </button>
+                    <button
+                      type="button"
+                      onclick="appendToDisplay('4')"
+                      class="calc-btn"
+                    >
+                      4
+                    </button>
+                    <button
+                      type="button"
+                      onclick="appendToDisplay('5')"
+                      class="calc-btn"
+                    >
+                      5
+                    </button>
+                    <button
+                      type="button"
+                      onclick="appendToDisplay('6')"
+                      class="calc-btn"
+                    >
+                      6
+                    </button>
+                    <button
+                      type="button"
+                      onclick="calculate()"
+                      class="calc-btn equals"
+                    >
+                      =
+                    </button>
+                    <button
+                      type="button"
+                      onclick="appendToDisplay('1')"
+                      class="calc-btn"
+                    >
+                      1
+                    </button>
+                    <button
+                      type="button"
+                      onclick="appendToDisplay('2')"
+                      class="calc-btn"
+                    >
+                      2
+                    </button>
+                    <button
+                      type="button"
+                      onclick="appendToDisplay('3')"
+                      class="calc-btn"
+                    >
+                      3
+                    </button>
+                    <button
+                      type="button"
+                      onclick="appendToDisplay('0')"
+                      class="calc-btn zero"
+                    >
+                      0
+                    </button>
+                    <button
+                      type="button"
+                      onclick="appendToDisplay('.')"
+                      class="calc-btn"
+                    >
+                      .
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Grade Calculator -->
+            <div class="tool-card">
+              <div class="tool-header">
+                <img
+                  src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=200&fit=crop"
+                  alt="Grade Calculator"
+                  class="tool-image"
+                />
+                <h3>Grade Calculator</h3>
+              </div>
+              <div class="tool-content">
+                <p>
+                  Calculate your grade point and class of degree based on
+                  percentage score.
+                </p>
+                <div class="calculator">
+                  <div class="input-group">
+                    <label for="score">Score (%)</label>
+                    <input
+                      type="number"
+                      id="score"
+                      placeholder="75"
+                      min="0"
+                      max="100"
+                      step="0.1"
+                      title="Enter your percentage score (0-100)"
+                    />
+                  </div>
+                  <button
+                    type="button"
+                    onclick="calculateGrade()"
+                    class="calc-btn"
+                  >
+                    Calculate Grade
+                  </button>
+                  <div id="grade-result" class="result"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; 2025 Jeremy. Built for ENT 302 Personal Website Assignment.
+        </p>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/portfolio.js"></script>
+  </body>
+</html>
