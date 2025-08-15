@@ -169,7 +169,7 @@ body::after {
 
 /* Hero Section */
 .hero {
-  min-height: calc(100vh - 70px);
+  min-height: calc(100dvh - 70px);
   display: flex;
   align-items: center;
   position: relative;
